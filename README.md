@@ -119,4 +119,6 @@ server.port=8080
 </project>
 
 ```
-<b>Project Structure : </b><a href="http://imgur.com/a/ihKuO">Click</a>
+<b>Project Structure : </b><a href="http://imgur.com/a/ihKuO" target="_blank">Click</a><br>
+<b>View in browser : </b><a href="http://imgur.com/a/zsNz2" target="_blank">Click</a><br>
+
