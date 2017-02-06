@@ -3,7 +3,7 @@
 A Sample Spring Boot CRUD application which demonstrates features of Spring Boot and it's seamless integration with Oracle Database.
 <br/>
 <b>Project Structure : </b><a target="_blank" href="http://imgur.com/a/ihKuO">Click</a><br>
-![alt tag](http://imgur.com/a/ihKuO)
+This is [a link](http://example.com){:target="_blank"} that opens in a new window.<br>
 <b>View in browser : </b><a target="_blank" href="http://imgur.com/a/zsNz2">Click</a><br>
 <b>IDE Used :</b> Intellij IDEA 2016.3<br/>
 <b>Java Version Used :</b> 1.8<br/><br/>
