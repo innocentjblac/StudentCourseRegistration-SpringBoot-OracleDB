@@ -2,9 +2,16 @@
 
 A Sample Spring Boot CRUD application which demonstrates features of Spring Boot and it's seamless integration with Oracle Database.
 
-IDE Used : Intellij IDEA 2016.3<br/>
-Java Version Used : 1.8<br/>
-Oracle DB integration :<br/>
+<b>IDE Used :</b> Intellij IDEA 2016.3<br/>
+<b>Java Version Used :</b> 1.8<br/><br/>
+<b>Dependencies (Maven) :</b><br/>
+- JDBC
+- Oracle
+- Thymeleaf
+- Web
+- JPA
+
+<b>Oracle DB integration :</b><br/>
 - Driver version : 11.2.0.3<br/>
 - Add Oracle JDBC driver in your local maven repository : 
 <a href="https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/">https://www.mkyong.com/maven/how-to-add-oracle-jdbc-driver-in-your-maven-local-repository/</a><br/>
@@ -33,7 +40,7 @@ spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
 spring.jpa.show-sql=true
 server.port=8080
 ```
-Application URL : <a href="http://localhost:8080/StudentApp/create/">http://localhost:8080/StudentApp/create/</a><br/><br/>
+<b>Application URL :</b> <a href="http://localhost:8080/StudentApp/create/">http://localhost:8080/StudentApp/create/</a><br/><br/>
 <b>pom.xml</b><br/>
 
 ```
@@ -112,4 +119,4 @@ Application URL : <a href="http://localhost:8080/StudentApp/create/">http://loca
 </project>
 
 ```
-<b>Project Structure</b>
+<b>Project Structure : </b><a href="http://imgur.com/a/ihKuO">Click</a>
