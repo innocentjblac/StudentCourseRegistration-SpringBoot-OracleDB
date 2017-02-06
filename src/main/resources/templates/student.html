@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Student</title>
+</head>
+<body>
+
+<h1>Create Student</h1>
+<form action="#" th:action="@{/StudentApp/create/}" method="POST" th:object="${student}">
+    Name : <input type="text" th:field="*{name}" placeholder="1 to 20 characters long"/>
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error - Name cannot be empty and length must be
+        between range 1-20</p><br/>
+
+    Phone : <input type="text" th:field="*{phone}" placeholder="3 characters long"/>
+    <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Name Error - Phone cannot be empty and length must be
+        3 digits</p><br/>
+
+    <input type="submit" value="Create"/>
+
+</form>
+<br/>
+<!--<div th:switch="${delete_status}">-->
+<!--<p th:case="success">Student deleted successfully !</p>-->
+<!--</div>-->
+<h1>List of students</h1>
+<!--<ul th:each="student : ${students}">-->
+<!--<li th:text="'NAME : '+${student.name}+' ; PHONE : '+${student.phone}+' ; ID : '+${student.id} ">alt.</li>-->
+<!--</ul>-->
+<table border="1" style="width: 60%">
+    <thead>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>PHONE</th>
+    <th>Delete (GET)</th>
+    <th>Delete (POST)</th>
+    <th>Edit (POST)</th>
+    </thead>
+    <tbody>
+
+    <tr th:each="student : ${students}">
+        <td th:text="${student.id}">X</td>
+        <td th:text="${student.name}">X</td>
+        <td th:text="${student.phone}">X</td>
+        <td><a th:href="@{/StudentApp/delete(id=${student.id})}">Delete</a></td>
+        <td>
+            <form th:action="@{/StudentApp/delete/}" method="post" action="#">
+                <input type="hidden" name="delete_id" th:value="${student.id}" value="" /><input type="submit"
+                                                                                                  value="Delete"/>
+            </form>
+        </td>
+        <td>
+            <!--<td><a th:href="@{/StudentApp/edit(id=${student.id})}">Edit</a></td>-->
+            <form th:action="@{/StudentApp/showEdit/}" method="post" action="#">
+                <input type="hidden" name="edit_id" th:value="${student.id}" value="" /><input type="submit"
+                                                                                                value="Edit"/>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<h1>List of Students with Even ID (Custom Query)</h1>
+<ul th:each="student : ${evenStudents}">
+    <li th:text=" 'Id : '+${student.id} ">X</li>
+    <li th:text=" 'Name : '+${student.name} ">X</li>
+    <li th:text=" 'Phone : '+${student.phone} ">X</li>
+
+</ul>
+</body>
+</html>

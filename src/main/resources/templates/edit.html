@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Edit Student</title>
+</head>
+<body>
+<h1>
+    Edit Student Info
+</h1>
+<!--<form action="#" th:action="@{/StudentApp/edit/}" method="post">-->
+<!--ID :   <input type="text" th:value="${id}" readonly="readonly" name="student_id"/><br/>-->
+<!--NAME :  <input type="text" name="student_name" th:value="${name}"/><br/>-->
+<!--PHONE :  <input type="text" th:value="${phone}" name="student_phone"/><br/>-->
+
+<!--<input type="submit" value="EDIT"/>-->
+<!--</form>-->
+<form action="#" th:action="@{/StudentApp/edit/}" method="post" th:object="${student}">
+    Id : <input type="text" th:value="${student.id}" readonly="readonly" th:field="*{id}"/><br/>
+    Name : <input type="text" th:value="${student.name}" th:field="*{name}"/>
+    <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error - Name cannot be empty and length must be
+        between range 1-20</p><br/>
+    <br/>
+    Phone : <input type="text" th:value="${student.phone}" th:field="*{phone}"/>
+    <p th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}">Name Error - Phone cannot be empty and length must be
+        3 digits</p>
+    <br/>
+    <br/>
+    <input type="submit" value="EDIT"/>
+</form>
+</body>
+</html>
