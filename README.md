@@ -1,7 +1,9 @@
 # StudentCourseRegistration-SpringBoot-OracleDB
 
 A Sample Spring Boot CRUD application which demonstrates features of Spring Boot and it's seamless integration with Oracle Database.
-
+<br/>
+<b>Project Structure : </b><a href="http://imgur.com/a/ihKuO" target="_blank">Click</a><br>
+<b>View in browser : </b><a href="http://imgur.com/a/zsNz2" target="_blank">Click</a><br>
 <b>IDE Used :</b> Intellij IDEA 2016.3<br/>
 <b>Java Version Used :</b> 1.8<br/><br/>
 <b>Dependencies (Maven) :</b><br/>
@@ -119,6 +121,5 @@ server.port=8080
 </project>
 
 ```
-<b>Project Structure : </b><a href="http://imgur.com/a/ihKuO" target="_blank">Click</a><br>
-<b>View in browser : </b><a href="http://imgur.com/a/zsNz2" target="_blank">Click</a><br>
+
 
