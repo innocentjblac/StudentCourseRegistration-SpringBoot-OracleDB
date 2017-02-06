@@ -2,8 +2,8 @@
 
 A Sample Spring Boot CRUD application which demonstrates features of Spring Boot and it's seamless integration with Oracle Database.
 <br/>
-<b>Project Structure : </b><a href="http://imgur.com/a/ihKuO" target="_blank">Click</a><br>
-<b>View in browser : </b><a href="http://imgur.com/a/zsNz2" target="_blank">Click</a><br>
+<b>Project Structure : </b><a target="_blank" href="http://imgur.com/a/ihKuO">Click</a><br>
+<b>View in browser : </b><a target="_blank" href="http://imgur.com/a/zsNz2">Click</a><br>
 <b>IDE Used :</b> Intellij IDEA 2016.3<br/>
 <b>Java Version Used :</b> 1.8<br/><br/>
 <b>Dependencies (Maven) :</b><br/>
@@ -27,17 +27,17 @@ A Sample Spring Boot CRUD application which demonstrates features of Spring Boot
 ```
 - Configure Oracle Database properties in application.properties : <br/>
 ```
-#spring.datasource.url=jdbc:mysql://localhost:3306/springbootfirstapp
+#spring.datasource.url=jdbc:mysql://localhost:3306/_SCHEMA_NAME
 #spring.datasource.username=_YOUR_USERNAME
-#spring.datasource.password=
+#spring.datasource.password=_YOUR_PASSWORD
 #spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 #spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
 #spring.jpa.hibernate.ddl-auto=update
 #server.port=9080
 spring.datasource.driver-class-name=oracle.jdbc.OracleDriver
-spring.datasource.url=jdbc:oracle:thin:@10.21.20.108:1525:dnitstdb
-spring.datasource.username=raijin
-spring.datasource.password=raijin
+spring.datasource.url=jdbc:oracle:thin:@_SERVER_IP:_SERVER_PORT:_SERVICE_ID
+spring.datasource.username=_YOUR_USERNAME
+spring.datasource.password=_YOUR_PASSWORD
 spring.jpa.database-platform=org.hibernate.dialect.Oracle10gDialect
 spring.jpa.show-sql=true
 server.port=8080
